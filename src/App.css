@@ -1,38 +1,420 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.gallery-block .image-info-block {
+  background-color: blue;
+  width: 70%;
+  /* padding: 5% 5%; */
+}
+
+
+.feature-list,.about-us {
+  font-size: 2.5rem;
+}
+
+.first-navigation-section a ,.second-navigation-section a,.third-navigation-section a{
+  text-decoration:none;
+  font-size: 1.1rem;
+}
+
+a:hover{
+   /* color: whitesmoke; */
+   font-weight: 500;
+   /* text-transform: uppercase; */
+
+}
+
+.navigation-block{
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+
+
+.second-navigation-section {
+  display: flex;
+  flex-direction: row;
+
+}
+.second-navigation-section a{
+  margin:0 0.6rem;
+  flex-wrap:wrap;
+
+
+}
+
+.first-navigation-section {
+ padding-left: 3rem;
+}
+
+.third-navigation-section {
+  padding-right: 3rem;
+}
+
+.third-navigation-section a{
+   margin:0 0.3rem;
+}
+
+.image-block{
+  display: flex;
+}
+
+.image-block-1{
+  width: 50%;
+  height: 16rem;
+}
+
+.image-block-2{
+  width: 45%;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-section-wrapper p{
+  animation-name: example1;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-delay:4s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-block-2 div h2{
+  position: relative;
+  font-size: 3.2rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  word-spacing: 0.05em;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+
+}
+.image-block-2 div p{
+  font-size: 1.2rem;
+  position: relative;
+  font-weight: 600;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.company-about-block {
+
+width: 90%;
+margin: auto;
+display: flex;
+
+}
+
+.company-about-logo {
+
+  width: 30%;
+
+}
+
+.company-about-info {
+  position: relative;
+  width: 70%;
+  padding: 3%;
+
+}
+
+.heading-block {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.third-section-wrapper{
+ margin-top: 4rem;
+}
+
+.third-section-block{
+  width: 90%;
+  margin: auto;
+  max-width: 1280px;
+}
+
+.gallery-block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.gallery-block .slide {
+  display: flex;
+  flex-direction: row;
+  margin-bottom:1rem;
+  /* justify-content: space-around; */
+}
+
+.gallery-block .image-block {
+   width: 30%;
+   height: 20%;
+   background-color: khaki;
+}
+
+.gallery-block .image-block img{
+   width: 100%;
+   height: 100%;
+}
+
+.gallery-block .image-info-block {
+   /* width: 18rem;
+   height: 5rem; */
+   background-color: blue;
+   padding: 5% 5%;
+}
+
+.gallery-block .first-slide.animate {
+   animation:slide1;
+   animation-duration:2s;
+   animation-iteration-count:1;
+}
+.gallery-block .second-slide.animate {
+   animation:slide2;
+   animation-duration:2s;
+   animation-iteration-count:1;
+}
+.gallery-block .third-slide.animate {
+   animation:slide3;
+   animation-duration:2s;
+   animation-iteration-count:1;
+}
+.gallery-block .fourth-slide.animate {
+   animation:slide4;
+   animation-duration:2s;
+   animation-iteration-count:1;
+}
+
+.image-info-block h4{
+  text-align: center;
   color: white;
+  font-weight: 500;
+  
 }
 
-.App-link {
-  color: #61dafb;
+/* .image-info-block h4:nth-child(1){
+margin-top: 1.3rem;
+} */
+
+.image-info-block h4:nth-child(2){
+margin-top: 3.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.company-about-logo{
+  background-image: url('./Images/wireframe1i5.webp');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-position:50% 50% ; */
 }
+
+.about-us{
+  text-align: left;
+}
+
+.read-more{
+  position: absolute;
+  right:6%;
+  background-color: blue;
+  border-radius: 6%;
+  border: 2px solid transparent;
+  height: auto;
+  padding-bottom: 0.2em;
+  color: white;
+  padding: 0.3em 0.3em;
+}
+
+
+.read-more:hover{
+  transition: all 0.5s ease;
+  background-color: white;
+  border-radius: 6% !important;
+  border:2px solid blue;
+  color: blue;
+  font-weight: 500;
+}
+
+
+/* .image-block-2 p{
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+} */
+
+
+
+
+@keyframes example1 {
+
+0%{
+  transform: translatey(3rem);
+  visibility: visible;
+}
+
+100%{
+  transform: translateX(0rem);
+  visibility: visible;
+}
+
+}
+
+@keyframes example {
+
+0%{
+  transform: translateX(-25rem);
+}
+
+100%{
+  transform: translateX(0rem);
+}
+
+}
+@keyframes slide1 {
+
+0%{
+  transform: translateX(-5rem);
+}
+
+100%{
+  transform: translateX(0rem);
+}
+
+}
+@keyframes slide2 {
+
+0%{
+  transform: translateX(300rem);
+}
+
+100%{
+  transform: translateX(0rem);
+}
+
+}
+@keyframes slide3 {
+
+0%{
+  transform: translateX(-5rem);
+}
+
+100%{
+  transform: translateX(0rem);
+}
+
+}
+@keyframes slide4 {
+
+0%{
+  transform: translateX(300rem);
+}
+
+100%{
+  transform: translateX(0rem);
+}
+
+}
+
+
+@media screen and (max-width: 767.98px) and (min-width: 579px) {
+
+  /* .company-about-logo {
+    background-image: url(/static/media/wireframe1i5.0f1ee76f.webp);
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+   background-position: 50% 50%; 
+} 
+*/
+
+}
+
+
+
+@media screen and (max-width: 578px) and (min-width: 0px)   {
+
+
+
+
+
+}
+
+
+ @media screen and (max-width: 767.9px) and (min-width: 0px)    {
+
+
+  /* .first-section-wrapper .image-block .heading{
+    padding: 1em 1em;
+  } */
+
+  .third-navigation-section {
+    padding-right: 0rem;
+}
+
+  .gallery-block .image-block {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    background-color: khaki;
+}
+
+.gallery-block .image-info-block {
+  background-color: blue;
+  width: 98%;
+  margin: auto;
+  /* padding: 5% 5%; */
+}
+
+.first-navigation-section {
+  padding-left: 1.2rem;
+}
+
+ .second-navigation-section {
+   flex-direction: column;
+ }
+
+.first-section-wrapper {
+    margin-top: 6rem; 
+}
+
+.second-section-wrapper {
+    margin-top: 6rem; 
+}
+
+.company-about-block {
+  flex-direction: column;
+}
+
+.gallery-block .slide {
+  flex-direction: column;
+  margin: 1.5em 0;
+}
+
+.company-about-info {
+  width:100%;
+  height: 100%;
+}
+
+.company-about-info {
+
+  width: 100%;
+}
+
+
+.first-navigation-section {
+  display: none;
+}
+/* .image-block-2 div h2 {
+  position: relative;
+  font-size: 1.5rem;
+} */
+
+
+
+ }
